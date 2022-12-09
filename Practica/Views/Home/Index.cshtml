@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="col-xl-3">
+        <!--FIRMA-->
+        <div class="row mg-t-20">
+            <div class="col-xl-4">
+            </div>
+            <div class="col-xl-4" style="text-align:center;">
+                <label>Firma de ciudadano</label>
+                <div class="row" id="contenido-firmar">
+                    <div class="col-md-12 justify-content-center">
+                        <canvas id="firma1-canvas" width="350" height="260">
+                            No tienes un buen navegador.
+                        </canvas>
+                        <img id="firma1-image" style="display: none;" src="data:image/jpeg;base64,/9j/4RiDRXhpZgAATU0AKgA..." width="350" height="260" alt="Firma del ciudadano">
+                    </div>
+                </div>
+                <label id="txtNombreCiudadano2"></label>
+                <span class="text-danger display-none" id="error-firma"></span>
+            </div>
+        </div>
+        <!--FIN FIRMA-->
+        <div class="row mg-t-20">
+            <div class="col-xl-12" style="text-align:center;">
+                <button type="button" class="btn btn-outline-secondary" id="btn-limpiar-firma1">Limpiar</button>
+                <button type="button" class="btn btn-outline-success" id="btn-aplicar-firma1">
+                    Aplicar
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check" id="check-registrar" style="display: none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <!--<img src="../assets/img/loading.gif" class="sppiner-loading display-none" id="sppiner-registrar" style="width: 20px !important;" />-->
+                </button>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-icon" style="height: 30px; padding: 0px 10px 0 10px;" id="n-guardar">
+            <i data-feather="check"></i> Registrar
+        </button>
+    </div>
+</div>
+
+<script src="../js/site.js" asp-append-version="true"></script>
+<script src="../Firma1.js" asp-append-version="true"></script>
