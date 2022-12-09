@@ -16,7 +16,7 @@ async function onClickNuevo() {
     var fff = getFirma1();
 
     const data = {
-        //Internos
+        //Aquí eran tus demas campos, pero en el de la firma:
         firma: fff
 
     };
